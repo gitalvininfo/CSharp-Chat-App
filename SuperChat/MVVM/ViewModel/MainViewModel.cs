@@ -14,6 +14,8 @@ namespace SuperChat.MVVM.ViewModel
         public ObservableCollection<ContactModel> Contacts { get; set; }
 
 
+
+
         public MainViewModel()
         {
             Messages = new ObservableCollection<MessageModel>();

@@ -13,8 +13,8 @@
 
     <Window.DataContext>
         <viewmodel:MainViewModel/>
-    </Window.DataContext> 
-    
+    </Window.DataContext>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
@@ -70,7 +70,7 @@
 
                 </StackPanel>
             </Grid>
-            
+
         </Border>
 
         <Grid Background="#2F3136" Grid.Row="1">
@@ -115,10 +115,87 @@
 
             </StackPanel>
         </Grid>
-        
-        
+
+
+        <Grid Grid.Column="1"
+              Grid.Row="1">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+
+            <Border BorderBrush="#2F3136"
+                    BorderThickness="0,0,0,2">
+                <Grid HorizontalAlignment="Stretch"
+                      Margin="8">
+                    
+                    <Label Content="Username"
+                           Foreground="White"
+                           FontWeight="Bold"
+                           Margin="5,0,5,0"
+                           VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Right">
+                        <Image Width="20" Height="20"
+                               RenderOptions.BitmapScalingMode="Fant"
+                               Margin="5,0,5,0 "
+                               Source="./Icons/phone.png"/>
+
+                        <Image Width="20" Height="20"
+                               RenderOptions.BitmapScalingMode="Fant"
+                               Margin="5,0,5,0 "
+                               Source="./Icons/phone.png"/>
+
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <ListView ItemsSource="{Binding SelectedContact.Messages}"
+                      Background="Transparent"
+                      BorderThickness="0"
+                      ItemContainerStyle="{StaticResource ChatItem}"
+                      Margin="8,0,0,0"
+                      Grid.Row="1"/>
+
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="90"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBox Grid.Row="1"
+                         Height="50"
+                         Text="Message @username"
+                         Style="{StaticResource MessageBox}"
+                         Grid.ColumnSpan="2"/>
+
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Right"
+                            Grid.Column="1"
+                            Margin="0,0,16,0">
+
+                    <Image Source="./Icons/phone.png"
+                           Width="20"
+                           Height="20"
+                           RenderOptions.BitmapScalingMode="Fant"
+                           Margin="5,5,5,0"/>
+
+                    <Image Source="./Icons/phone.png"
+                           Width="20"
+                           Height="20"
+                           RenderOptions.BitmapScalingMode="Fant"
+                           Margin="5,5,16,0"/>
+ 
+                </StackPanel>
+            </Grid>
+
+        </Grid>
+
     </Grid>
-    
-    
-    
+
+
+
 </Window>

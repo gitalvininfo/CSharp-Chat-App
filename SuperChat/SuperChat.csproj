@@ -8,9 +8,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Icons\phone.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Icons\phone.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Core\" />
     <Folder Include="MVVM\View\" />
-    <Folder Include="Icons\" />
   </ItemGroup>
 
 </Project>
